@@ -10,7 +10,7 @@ ctx.drawImage(img,0,0,400,162);
 
 
 function prompt_elegir() {
-    var elegir_elemento = prompt("Elige tu elemento (piedra, papel, tijeras)");
+    var elegir_elemento = prompt("Elige tu elemento (piedra, papel, tijera)");
     console.log(elegir_elemento)
     if (elegir_elemento == "piedra") {
         alert("has elegido piedra");
@@ -18,9 +18,9 @@ function prompt_elegir() {
     } else if (elegir_elemento == "papel") {
         alert("has elegido papel");
         return elemento = "papel";
-    } else if (elegir_elemento == "tijeras") {
-        alert("has elegido tijeras");
-        return elemento = "tijeras";
+    } else if (elegir_elemento == "tijera") {
+        alert("has elegido tijera");
+        return elemento = "tijera";
     } else {
         alert("Este no es un elemento admitido. Revisa las mayusculas o un error tipografico.");
     };
@@ -35,8 +35,8 @@ function jugar() {
     alert("El enemigo eligió: " + elemento_enemigo)
     console.log("elemento enemigo: " + elemento_enemigo);
     console.log("elemento: " + elemento);
-    if(elemento == 'tijeras' && elemento_enemigo == 'papel' 
-    || elemento == 'piedra' && elemento_enemigo == 'tijeras' 
+    if(elemento == 'tijera' && elemento_enemigo == 'papel' 
+    || elemento == 'piedra' && elemento_enemigo == 'tijera' 
     || elemento == 'papel' && elemento_enemigo == 'piedra'){
         console.log("gana el jugador")
         alert("Ganaste!")
@@ -45,8 +45,8 @@ function jugar() {
         console.log("Empate")
         alert("Es un empate.")
     }
-    if(elemento == 'papel' && elemento_enemigo == 'tijeras' 
-    || elemento == 'tijeras' && elemento_enemigo == 'piedra' 
+    if(elemento == 'papel' && elemento_enemigo == 'tijera' 
+    || elemento == 'tijera' && elemento_enemigo == 'piedra' 
     || elemento == 'piedra' && elemento_enemigo == 'papel'){
        console.log("Perdiste")
        alert("Haz perdido.") 
@@ -60,7 +60,7 @@ function elegir_elemento_enemigo() {
     var elemento_enemigo;
     switch (resultado) {
         case 0:
-            elemento_enemigo = "tijeras";
+            elemento_enemigo = "tijera";
             break;
         case 1:
             elemento_enemigo = "piedra";
